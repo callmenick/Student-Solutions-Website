@@ -7,4 +7,94 @@
 .c-hero {
   padding: 24px 0;
   background-color: $color--neutral-dark;
+  text-align: center;
+}
+
+/**
+ * The heading.
+ */
+
+.c-hero__heading {
+  color: #fff;
+  font-size: $font-size--l;
+  text-transform: uppercase;
+}
+
+/**
+ * The sub heading.
+ */
+
+.c-hero__sub-heading {
+  color: $color--slate;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+/**
+ * Text
+ */
+
+.c-hero__text {
+  color: #fff;
+}
+
+/**
+ * Hero special... i.e. on the home page.
+ */
+
+.c-hero--special {
+
+  .c-hero__inner {
+    display: flex;
+    flex-direction: column;
+
+    @include mq-medium {
+      flex-direction: row;
+      align-items: center;
+    }
+  }
+
+  .c-hero__heading {
+    margin-bottom: 24px;
+    font-size: $font-size--xl;
+
+    @include mq-medium {
+      flex: 0 0 288px;
+      margin-bottom: 0;
+      padding-right: 24px;
+      text-align: right;
+    }
+
+    @include mq-large {
+      flex: 0 0 336px;
+      font-size: $font-size--xxl;
+    }
+
+    @include mq-xlarge {
+      flex: 0 0 432px;
+      font-size: $font-size--xxxl;
+    }
+  }
+
+  .c-hero__content {
+    @include mq-medium {
+      padding: 24px 0 24px 48px;
+      text-align: right;
+      border-left: solid 1px $color--neutral;
+    }
+
+    @include mq-large {
+      padding: 48px 0 48px 96px;
+    }
+  }
+
+  .c-hero__sub-heading {
+    margin-bottom: 12px;
+    font-size: $font-size--m;
+  }
+
+  .c-hero__text {
+    margin-bottom: 12px;
+  }
+
 }

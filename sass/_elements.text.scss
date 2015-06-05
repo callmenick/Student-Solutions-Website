@@ -4,6 +4,27 @@
   
 ----------------------------------------------------------------------------- */
 
+/**
+ * Some resets.
+ */
+
+p,
+ul,
+ol,
+a,
+b,
+strong,
+i,
+em {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+}
+
+/**
+ * Links.
+ */
+
 a {
   text-decoration: none;
   transition: color 0.3s;
@@ -13,10 +34,18 @@ a:hover {
   
 }
 
+/**
+ * Bold and strong elements.
+ */
+
 b,
 strong {
   font-weight: 700;
 }
+
+/**
+ * Italics and emphasised elements.
+ */
 
 i,
 em {
