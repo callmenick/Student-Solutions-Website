@@ -9,12 +9,17 @@
  */
 
 .c-btn {
-  background: none;
+  display: inline-block;
+  color: #fff;
+  font-weight: 400;
+  text-transform: uppercase;
   border: none;
+  box-shadow: none;
   border-radius: none;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+  transition: box-shadow 0.3s;
 }
 
 .c-btn:focus {
@@ -24,3 +29,56 @@
 /**
  * Size modifiers.
  */
+
+.c-btn--s {
+  padding: 12px 36px;
+  font-size: $font-size--s;
+}
+
+.c-btn--m {
+  font-size: $font-size--m;
+}
+
+.c-btn--l {
+  font-size: $font-size--l;
+}
+
+/**
+ * Colour modifiers.
+ */
+
+.c-btn--purple {
+  background-color: $color--purple;
+  box-shadow: inset 0 -4px 0 0 $color--dark-purple;
+}
+
+.c-btn--purple:hover {
+  box-shadow: inset 0 -72px 0 0 $color--dark-purple;
+}
+
+.c-btn--slate {
+  background-color: $color--slate;
+  box-shadow: inset 0 -4px 0 0 $color--dark-slate;
+}
+
+.c-btn--slate:hover {
+  box-shadow: inset 0 -72px 0 0 $color--dark-slate;
+}
+
+.c-btn--grey {
+  background-color: $color--dark-slate;
+  box-shadow: inset 0 -4px 0 0 $color--neutral-dark;
+}
+
+.c-btn--grey:hover {
+  box-shadow: inset 0 -72px 0 0 $color--neutral-dark;
+}
+
+.c-btn--green {
+  background-color: $color--green;
+  box-shadow: inset 0 -4px 0 0 $color--dark-green;
+}
+
+.c-btn--green:hover {
+  box-shadow: inset 0 -72px 0 0 $color--dark-green;
+}

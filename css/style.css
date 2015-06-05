@@ -563,7 +563,19 @@ img {
   
 ----------------------------------------------------------------------------- */
 .o-container {
+  margin: 0 auto;
   padding: 0 24px;
+}
+
+.o-container--s {
+  max-width: 720px;
+}
+
+.o-container--m {
+  max-width: 960px;
+}
+
+.o-container--l {
   max-width: 1280px;
 }
 
@@ -897,18 +909,20 @@ img {
 @media all and (min-width: 1020px) {
   .c-hero--special .c-hero__heading {
     -webkit-box-flex: 0;
-    -webkit-flex: 0 0 336px;
-        -ms-flex: 0 0 336px;
-            flex: 0 0 336px;
+    -webkit-flex: 0 0 384px;
+        -ms-flex: 0 0 384px;
+            flex: 0 0 384px;
+    padding-right: 36px;
     font-size: 42px;
   }
 }
 @media all and (min-width: 1200px) {
   .c-hero--special .c-hero__heading {
     -webkit-box-flex: 0;
-    -webkit-flex: 0 0 432px;
-        -ms-flex: 0 0 432px;
-            flex: 0 0 432px;
+    -webkit-flex: 0 0 480px;
+        -ms-flex: 0 0 480px;
+            flex: 0 0 480px;
+    padding-right: 48px;
     font-size: 48px;
   }
 }
@@ -929,7 +943,80 @@ img {
   font-size: 18px;
 }
 .c-hero--special .c-hero__text {
+  margin-bottom: 24px;
+}
+@media all and (min-width: 1020px) {
+  .c-hero--special .c-hero__text {
+    margin-bottom: 48px;
+  }
+}
+
+/* -----------------------------------------------------------------------------
+
+  CTA COMPONENT
+  
+----------------------------------------------------------------------------- */
+.c-cta {
+  padding: 24px 0;
+  text-align: center;
+}
+@media all and (min-width: 720px) {
+  .c-cta {
+    padding: 48px 0;
+  }
+}
+
+/**
+ * Headings
+ */
+.c-cta__heading {
   margin-bottom: 12px;
+  color: #fff;
+  font-size: 22px;
+  text-transform: uppercase;
+}
+@media all and (min-width: 720px) {
+  .c-cta__heading {
+    margin-bottom: 24px;
+    font-size: 28px;
+  }
+}
+@media all and (min-width: 1020px) {
+  .c-cta__heading {
+    font-size: 42px;
+  }
+}
+@media all and (min-width: 1200px) {
+  .c-cta__heading {
+    font-size: 48px;
+  }
+}
+
+.c-cta__text {
+  margin-bottom: 24px;
+  color: #343434;
+}
+@media all and (min-width: 720px) {
+  .c-cta__text {
+    margin-bottom: 36px;
+    font-size: 18px;
+  }
+}
+@media all and (min-width: 1020px) {
+  .c-cta__text {
+    margin-bottom: 48px;
+  }
+}
+
+/**
+ * Colour modifiers
+ */
+.c-cta--green {
+  background-color: #aad264;
+}
+
+.c-cta--slate {
+  background-color: #96aa96;
 }
 
 /* -----------------------------------------------------------------------------
@@ -941,12 +1028,18 @@ img {
  * Set up the button styles.
  */
 .c-btn {
-  background: none;
+  display: inline-block;
+  color: #fff;
+  font-weight: 400;
+  text-transform: uppercase;
   border: none;
+  box-shadow: none;
   border-radius: none;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+  -webkit-transition: box-shadow 0.3s;
+          transition: box-shadow 0.3s;
 }
 
 .c-btn:focus {
@@ -956,3 +1049,54 @@ img {
 /**
  * Size modifiers.
  */
+.c-btn--s {
+  padding: 12px 36px;
+  font-size: 14px;
+}
+
+.c-btn--m {
+  font-size: 18px;
+}
+
+.c-btn--l {
+  font-size: 22px;
+}
+
+/**
+ * Colour modifiers.
+ */
+.c-btn--purple {
+  background-color: #bc9dd8;
+  box-shadow: inset 0 -4px 0 0 #533c9f;
+}
+
+.c-btn--purple:hover {
+  box-shadow: inset 0 -72px 0 0 #533c9f;
+}
+
+.c-btn--slate {
+  background-color: #96aa96;
+  box-shadow: inset 0 -4px 0 0 #5f6c5f;
+}
+
+.c-btn--slate:hover {
+  box-shadow: inset 0 -72px 0 0 #5f6c5f;
+}
+
+.c-btn--grey {
+  background-color: #5f6c5f;
+  box-shadow: inset 0 -4px 0 0 #343434;
+}
+
+.c-btn--grey:hover {
+  box-shadow: inset 0 -72px 0 0 #343434;
+}
+
+.c-btn--green {
+  background-color: #aad264;
+  box-shadow: inset 0 -4px 0 0 #559f41;
+}
+
+.c-btn--green:hover {
+  box-shadow: inset 0 -72px 0 0 #559f41;
+}

@@ -1,0 +1,64 @@
+/* -----------------------------------------------------------------------------
+
+  CTA COMPONENT
+  
+----------------------------------------------------------------------------- */
+
+.c-cta {
+  padding: 24px 0;
+  text-align: center;
+
+  @include mq-medium {
+    padding: 48px 0;
+  }
+}
+
+/**
+ * Headings
+ */
+
+.c-cta__heading {
+  margin-bottom: 12px;
+  color: #fff;
+  font-size: $font-size--l;
+  text-transform: uppercase;
+
+  @include mq-medium {
+    margin-bottom: 24px;
+    font-size: $font-size--xl;
+  }
+
+  @include mq-large {
+    font-size: $font-size--xxl;
+  }
+
+  @include mq-xlarge {
+    font-size: $font-size--xxxl;
+  }
+}
+
+.c-cta__text {
+  margin-bottom: 24px;
+  color: $color--neutral-dark;
+
+  @include mq-medium {
+    margin-bottom: 36px;
+    font-size: $font-size--m;
+  }
+
+  @include mq-large {
+    margin-bottom: 48px;
+  }
+}
+
+/**
+ * Colour modifiers
+ */
+
+.c-cta--green {
+  background-color: $color--green;
+}
+
+.c-cta--slate {
+  background-color: $color--slate;
+}

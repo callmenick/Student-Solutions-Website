@@ -66,12 +66,14 @@
     }
 
     @include mq-large {
-      flex: 0 0 336px;
+      flex: 0 0 384px;
+      padding-right: 36px;
       font-size: $font-size--xxl;
     }
 
     @include mq-xlarge {
-      flex: 0 0 432px;
+      flex: 0 0 480px;
+      padding-right: 48px;
       font-size: $font-size--xxxl;
     }
   }
@@ -80,7 +82,7 @@
     @include mq-medium {
       padding: 24px 0 24px 48px;
       text-align: right;
-      border-left: solid 1px $color--neutral;
+      border-left: solid 1px $color--dark-slate;
     }
 
     @include mq-large {
@@ -94,7 +96,11 @@
   }
 
   .c-hero__text {
-    margin-bottom: 12px;
+    margin-bottom: 24px;
+
+    @include mq-large {
+      margin-bottom: 48px;
+    }
   }
 
 }

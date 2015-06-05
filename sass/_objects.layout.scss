@@ -5,6 +5,18 @@
 ----------------------------------------------------------------------------- */
 
 .o-container {
+  margin: 0 auto;
   padding: 0 24px;
+}
+
+.o-container--s {
+  max-width: 720px;
+}
+
+.o-container--m {
+  max-width: 960px;
+}
+
+.o-container--l {
   max-width: 1280px;
 }
