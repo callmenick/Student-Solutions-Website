@@ -5,7 +5,7 @@
 ----------------------------------------------------------------------------- */
 
 .o-grid {
-  /**/
+  overflow: hidden;
 }
 
 /**
@@ -14,6 +14,7 @@
 
 .o-grid__row {
   display: flex;
+  flex-flow: row wrap;
 }
 
 .o-grid__row:last-child {
@@ -25,7 +26,7 @@
  */
 
 .o-grid__item  {
-
+  /**/
 }
 
 .o-grid__item--fill {
@@ -35,3 +36,36 @@
 /**
  * Grid sizes
  */
+
+.o-grid__item--25 {
+  flex: 0 0 100%;
+}
+
+@include mq-small {
+
+  .o-grid--break-s {
+    
+    .o-grid__row {
+      margin: 0 -24px;
+    }
+
+    .o-grid__item--25 {
+      flex: 0 0 50%;
+      padding: 0 24px;
+    }
+
+  }
+
+}
+
+@include mq-medium {
+
+  .o-grid--break-s {
+    
+    .o-grid__item--25 {
+      flex: 0 0 25%;
+    }
+
+  }
+
+}
