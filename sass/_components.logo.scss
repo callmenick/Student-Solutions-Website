@@ -19,11 +19,12 @@
   bottom: 0; left: 0;
   width: 100%;
   height: 4px;
+  background-color: $color--green;
   content: "";
 }
 
 /**
- * On light backgrounds
+ * On light backgrounds.
  */
 
 .c-logo--light {
@@ -35,6 +36,15 @@
   color: $color--dark-slate;
 }
 
-.c-logo--light > span::after {
-  background-color: $color--green;
+/**
+ * On dark backgrounds.
+ */
+
+.c-logo--dark {
+  color: $color--slate;
+  font-weight: 400;
+}
+
+.c-logo--dark > span {
+  color: #fff;
 }

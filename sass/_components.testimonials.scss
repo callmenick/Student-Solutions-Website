@@ -1,0 +1,53 @@
+/* -----------------------------------------------------------------------------
+
+  TESTIMONIALS COMPONENT
+  
+----------------------------------------------------------------------------- */
+
+
+/**
+ * Testimonials parent class.
+ */
+
+.c-testimonials {
+  padding: 24px 0;
+
+  @include mq-large {
+    padding: 48px 0;
+  }
+}
+
+/**
+ * Single testimonials.
+ */
+
+.c-testimonial {
+  display: flex;
+}
+
+.c-testimonial__icon {
+  flex: 0 0 60px;
+  margin-right: 12px;
+
+  @include mq-small {
+    margin-right: 24px;
+  }
+}
+
+.c-testimonial__content {
+  flex: 1;
+}
+
+.c-testimonial__text {
+  margin-bottom: 12px;
+}
+
+.c-testimonial__name {
+  color: $color--neutral-dark;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.c-testimonial__position {
+  color: $color--green;
+}

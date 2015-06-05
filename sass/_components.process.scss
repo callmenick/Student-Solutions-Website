@@ -13,26 +13,6 @@
   }
 }
 
-.c-process__item {
-  margin-bottom: 48px;
-}
-
-.c-process__item:last-child {
-  margin-bottom: 0;
-}
-
-@include mq-small {
-  .c-process__item:nth-child(3n) {
-    margin-bottom: 0;
-  }
-}
-
-@include mq-medium {
-  .c-process__item {
-    margin-bottom: 0;
-  }
-}
-
 .c-process__image {
   margin: 0 auto 24px auto;
 

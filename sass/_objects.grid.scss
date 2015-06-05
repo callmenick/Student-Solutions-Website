@@ -15,10 +15,7 @@
 .o-grid__row {
   display: flex;
   flex-flow: row wrap;
-}
-
-.o-grid__row:last-child {
-  margin-bottom: 0;
+  margin-bottom: 48px;
 }
 
 /**
@@ -37,8 +34,15 @@
  * Grid sizes
  */
 
-.o-grid__item--25 {
+.o-grid__item--25,
+.o-grid__item--50 {
   flex: 0 0 100%;
+  margin-bottom: 48px;
+}
+
+.o-grid__item--25:last-child,
+.o-grid__item--50:last-child {
+  margin-bottom: 0;
 }
 
 @include mq-small {
@@ -46,12 +50,26 @@
   .o-grid--break-s {
     
     .o-grid__row {
-      margin: 0 -24px;
+      margin-left: -24px;
+      margin-right: -24px;
     }
 
-    .o-grid__item--25 {
+    .o-grid__row:last-child {
+      margin-bottom: 0;
+    }
+
+    .o-grid__item--25,
+    .o-grid__item--50 {
       flex: 0 0 50%;
       padding: 0 24px;
+    }
+
+    .o-grid__item--25:nth-child(3n) {
+      margin-bottom: 0;
+    }
+
+    .o-grid__item--50 {
+      margin-bottom: 0;
     }
 
   }
@@ -64,6 +82,29 @@
     
     .o-grid__item--25 {
       flex: 0 0 25%;
+      margin-bottom: 0;
+    }
+
+  }
+
+  .o-grid--break-m {
+
+    .o-grid__row {
+      margin-left: -24px;
+      margin-right: -24px;
+    }
+
+    .o-grid__row:last-child {
+      margin-bottom: 0;
+    }
+
+    .o-grid__item--50 {
+      flex: 0 0 50%;
+      padding: 0 24px;
+    }
+
+    .o-grid__item--50 {
+      margin-bottom: 0;
     }
 
   }

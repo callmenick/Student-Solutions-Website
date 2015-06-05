@@ -599,10 +599,7 @@ img {
   -webkit-flex-flow: row wrap;
       -ms-flex-flow: row wrap;
           flex-flow: row wrap;
-}
-
-.o-grid__row:last-child {
-  margin-bottom: 0;
+  margin-bottom: 48px;
 }
 
 /**
@@ -622,23 +619,41 @@ img {
 /**
  * Grid sizes
  */
-.o-grid__item--25 {
+.o-grid__item--25,
+.o-grid__item--50 {
   -webkit-box-flex: 0;
   -webkit-flex: 0 0 100%;
       -ms-flex: 0 0 100%;
           flex: 0 0 100%;
+  margin-bottom: 48px;
+}
+
+.o-grid__item--25:last-child,
+.o-grid__item--50:last-child {
+  margin-bottom: 0;
 }
 
 @media all and (min-width: 480px) {
   .o-grid--break-s .o-grid__row {
-    margin: 0 -24px;
+    margin-left: -24px;
+    margin-right: -24px;
   }
-  .o-grid--break-s .o-grid__item--25 {
+  .o-grid--break-s .o-grid__row:last-child {
+    margin-bottom: 0;
+  }
+  .o-grid--break-s .o-grid__item--25,
+  .o-grid--break-s .o-grid__item--50 {
     -webkit-box-flex: 0;
     -webkit-flex: 0 0 50%;
         -ms-flex: 0 0 50%;
             flex: 0 0 50%;
     padding: 0 24px;
+  }
+  .o-grid--break-s .o-grid__item--25:nth-child(3n) {
+    margin-bottom: 0;
+  }
+  .o-grid--break-s .o-grid__item--50 {
+    margin-bottom: 0;
   }
 }
 @media all and (min-width: 768px) {
@@ -647,6 +662,25 @@ img {
     -webkit-flex: 0 0 25%;
         -ms-flex: 0 0 25%;
             flex: 0 0 25%;
+    margin-bottom: 0;
+  }
+
+  .o-grid--break-m .o-grid__row {
+    margin-left: -24px;
+    margin-right: -24px;
+  }
+  .o-grid--break-m .o-grid__row:last-child {
+    margin-bottom: 0;
+  }
+  .o-grid--break-m .o-grid__item--50 {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 50%;
+        -ms-flex: 0 0 50%;
+            flex: 0 0 50%;
+    padding: 0 24px;
+  }
+  .o-grid--break-m .o-grid__item--50 {
+    margin-bottom: 0;
   }
 }
 /* -----------------------------------------------------------------------------
@@ -755,6 +789,71 @@ img {
   FOOTER OBJECT
   
 ----------------------------------------------------------------------------- */
+.o-footer {
+  padding: 24px 0;
+  text-align: center;
+}
+@media all and (min-width: 768px) {
+  .o-footer {
+    text-align: left;
+  }
+}
+@media all and (min-width: 1020px) {
+  .o-footer {
+    padding: 48px 0;
+  }
+}
+
+.o-footer__top {
+  margin-bottom: 48px;
+}
+@media all and (min-width: 768px) {
+  .o-footer__top {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+.o-footer__branding,
+.o-footer__navigation {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.o-footer__title {
+  margin-bottom: 12px;
+  font-size: 22px;
+}
+@media all and (min-width: 768px) {
+  .o-footer__title {
+    margin-bottom: 24px;
+    font-size: 28px;
+  }
+}
+
+.o-footer__text {
+  color: #fff;
+}
+
+.o-footer__navigation {
+  margin-bottom: 12px;
+}
+
+.o-footer__copyright {
+  display: block;
+  color: #96aa96;
+  font-size: 12px;
+}
+@media all and (min-width: 768px) {
+  .o-footer__copyright {
+    text-align: center;
+  }
+}
+
 /* -----------------------------------------------------------------------------
 
   LOGO COMPONENT
@@ -776,11 +875,12 @@ img {
   left: 0;
   width: 100%;
   height: 4px;
+  background-color: #aad264;
   content: "";
 }
 
 /**
- * On light backgrounds
+ * On light backgrounds.
  */
 .c-logo--light {
   color: #343434;
@@ -791,8 +891,16 @@ img {
   color: #5f6c5f;
 }
 
-.c-logo--light > span::after {
-  background-color: #aad264;
+/**
+ * On dark backgrounds.
+ */
+.c-logo--dark {
+  color: #96aa96;
+  font-weight: 400;
+}
+
+.c-logo--dark > span {
+  color: #fff;
 }
 
 /* -----------------------------------------------------------------------------
@@ -862,6 +970,47 @@ img {
   NAVIGATION SECONDARY COMPONENT
   
 ----------------------------------------------------------------------------- */
+.c-navigation-secondary__items {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+@media all and (min-width: 768px) {
+  .c-navigation-secondary__items {
+    text-align: right;
+  }
+}
+
+.c-navigation-secondary__item {
+  display: inline-block;
+  margin: 0 12px;
+}
+@media all and (min-width: 768px) {
+  .c-navigation-secondary__item {
+    display: block;
+    margin: 0;
+    font-size: 18px;
+  }
+}
+
+.c-navigation-secondary__link {
+  display: block;
+  color: #fff;
+}
+@media all and (min-width: 768px) {
+  .c-navigation-secondary__link {
+    display: inline-block;
+  }
+}
+
+.c-navigation-secondary__link:hover {
+  color: #aad264;
+}
+
+.c-navigation-secondary__item.is-active > .c-navigation-secondary__link {
+  color: #aad264;
+}
+
 /* -----------------------------------------------------------------------------
 
   HERO COMPONENT
@@ -1068,24 +1217,6 @@ img {
   }
 }
 
-.c-process__item {
-  margin-bottom: 48px;
-}
-
-.c-process__item:last-child {
-  margin-bottom: 0;
-}
-
-@media all and (min-width: 480px) {
-  .c-process__item:nth-child(3n) {
-    margin-bottom: 0;
-  }
-}
-@media all and (min-width: 768px) {
-  .c-process__item {
-    margin-bottom: 0;
-  }
-}
 .c-process__image {
   margin: 0 auto 24px auto;
 }
@@ -1105,6 +1236,67 @@ img {
   .c-process__title {
     font-size: 22px;
   }
+}
+
+/* -----------------------------------------------------------------------------
+
+  TESTIMONIALS COMPONENT
+  
+----------------------------------------------------------------------------- */
+/**
+ * Testimonials parent class.
+ */
+.c-testimonials {
+  padding: 24px 0;
+}
+@media all and (min-width: 1020px) {
+  .c-testimonials {
+    padding: 48px 0;
+  }
+}
+
+/**
+ * Single testimonials.
+ */
+.c-testimonial {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c-testimonial__icon {
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 60px;
+      -ms-flex: 0 0 60px;
+          flex: 0 0 60px;
+  margin-right: 12px;
+}
+@media all and (min-width: 480px) {
+  .c-testimonial__icon {
+    margin-right: 24px;
+  }
+}
+
+.c-testimonial__content {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.c-testimonial__text {
+  margin-bottom: 12px;
+}
+
+.c-testimonial__name {
+  color: #343434;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.c-testimonial__position {
+  color: #aad264;
 }
 
 /* -----------------------------------------------------------------------------

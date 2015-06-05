@@ -7,3 +7,41 @@
 .c-navigation-secondary {
   
 }
+
+.c-navigation-secondary__items {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  @include mq-medium {
+    text-align: right;
+  }
+}
+
+.c-navigation-secondary__item {
+  display: inline-block;
+  margin: 0 12px;
+
+  @include mq-medium {
+    display: block;
+    margin: 0;
+    font-size: $font-size--m;
+  }
+}
+
+.c-navigation-secondary__link {
+  display: block;
+  color: #fff;
+
+  @include mq-medium {
+    display: inline-block;
+  }
+}
+
+.c-navigation-secondary__link:hover {
+  color: $color--green;
+}
+
+.c-navigation-secondary__item.is-active > .c-navigation-secondary__link {
+  color: $color--green;
+}

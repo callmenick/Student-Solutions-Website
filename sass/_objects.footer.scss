@@ -5,5 +5,55 @@
 ----------------------------------------------------------------------------- */
 
 .o-footer {
-  
+  padding: 24px 0;
+  text-align: center;
+
+  @include mq-medium {
+    text-align: left;
+  }
+
+  @include mq-large {
+    padding: 48px 0;
+  }
+}
+
+.o-footer__top {
+  margin-bottom: 48px;
+
+  @include mq-medium {
+    display: flex;
+  }
+}
+
+.o-footer__branding,
+.o-footer__navigation {
+  flex: 1;
+}
+
+.o-footer__title {
+  margin-bottom: 12px;
+  font-size: $font-size--l;
+
+  @include mq-medium {
+    margin-bottom: 24px;
+    font-size: $font-size--xl;
+  }
+}
+
+.o-footer__text {
+  color: #fff;
+}
+
+.o-footer__navigation {
+  margin-bottom: 12px;
+}
+
+.o-footer__copyright {
+  display: block;
+  color: $color--slate;
+  font-size: $font-size--xs;
+
+  @include mq-medium {
+    text-align: center;
+  }
 }
