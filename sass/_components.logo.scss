@@ -1,0 +1,40 @@
+/* -----------------------------------------------------------------------------
+
+  LOGO COMPONENT
+  
+----------------------------------------------------------------------------- */
+
+.c-logo {
+  word-spacing: -4px;
+}
+
+.c-logo > span {
+  position: relative;
+  font-weight: 700;
+}
+
+.c-logo > span::after {
+  display: block;
+  position: absolute;
+  bottom: 0; left: 0;
+  width: 100%;
+  height: 4px;
+  content: "";
+}
+
+/**
+ * On light backgrounds
+ */
+
+.c-logo--light {
+  color: $color--neutral-dark;
+  font-weight: 400;
+}
+
+.c-logo--light > span {
+  color: $color--neutral;
+}
+
+.c-logo--light > span::after {
+  background-color: $color--green;
+}

@@ -1,0 +1,35 @@
+// -----------------------------------------------------------------------------
+//
+// MEDIA QUERY MIXIN
+//
+// -----------------------------------------------------------------------------
+
+@mixin mq-xsmall {
+  @media all and ( min-width: #{$bp--xsmall} ) {
+    @content;
+  }
+}
+
+@mixin mq-small {
+  @media all and ( min-width: #{$bp--small} ) {
+    @content;
+  }
+}
+
+@mixin mq-medium {
+  @media all and ( min-width: #{$bp--medium} ) {
+    @content;
+  }
+}
+
+@mixin mq-large {
+  @media all and ( min-width: #{$bp--large} ) {
+    @content;
+  }
+}
+
+@mixin mq-xlarge {
+  @media all and ( min-width: #{$bp--xlarge} ) {
+    @content;
+  }
+}

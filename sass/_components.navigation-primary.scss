@@ -1,0 +1,66 @@
+/* -----------------------------------------------------------------------------
+
+  NAVIGATION PRIMARY COMPONENT
+  
+----------------------------------------------------------------------------- */
+
+.c-navigation-primary {
+  /* the container */
+}
+
+/**
+ * The items, i.e. the unordered list.
+ */
+
+.c-navigation-primary__items {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+
+  @include mq-medium {
+    text-align: right;
+  }
+}
+
+/**
+ * Each list item.
+ */
+
+.c-navigation-primary__item {
+  display: inline-block;
+  margin: 0 8px;
+
+  @include mq-medium {
+    margin: 0 0 0 24px;
+  }
+
+  @include mq-large {
+    font-size: $font-size--m;
+  }
+}
+
+/**
+ * Links.
+ */
+
+.c-navigation-primary__link {
+  display: block;
+  position: relative;
+  color: $color--slate;
+}
+
+.c-navigation-primary__link:hover {
+  color: $color--neutral-dark;
+}
+
+/**
+ * Active states.
+ */
+
+.c-navigation-primary__item.is-active > .c-navigation-primary__link {
+  padding: 4px 12px;
+  color: #fff;
+  background-color: $color--green;
+  border-radius: 4px;
+}

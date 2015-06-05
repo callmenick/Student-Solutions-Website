@@ -1,0 +1,62 @@
+/* -----------------------------------------------------------------------------
+
+  HEADER OBJECT
+  
+----------------------------------------------------------------------------- */
+
+.o-header {
+  background-color: #fff;
+  padding: 24px 0;
+  border-top: solid 8px $color--green;
+
+  @include mq-medium {
+    padding: 36px 0;
+  }
+
+  @include mq-large {
+    padding: 48px 0;
+  }
+}
+
+.o-header__inner {
+  display: flex;
+  flex-direction: column;
+
+  @include mq-medium {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+/**
+ * Header title
+ */
+
+.o-header__title {
+  flex: 0 0 100%;
+  margin-bottom: 36px;
+  font-size: $font-size--xl;
+  text-align: center;
+
+  @include mq-medium {
+    flex: none;
+    margin-bottom: 0;
+    text-align: left;
+  }
+
+  @include mq-large {
+    font-size: $font-size--xxl;
+  }
+}
+
+/**
+ * Header navigation
+ */
+
+.o-header__navigation {
+  flex: 0 0 100%;
+
+  @include mq-medium {
+    flex: 1;
+  }
+}
