@@ -51,7 +51,7 @@
 }
 
 .c-navigation-primary__link:hover {
-  color: $color--neutral-dark;
+  color: $color--green;
 }
 
 /**
@@ -59,8 +59,5 @@
  */
 
 .c-navigation-primary__item.is-active > .c-navigation-primary__link {
-  padding: 4px 12px;
-  color: #fff;
-  background-color: $color--green;
-  border-radius: 4px;
+  color: $color--neutral-dark;
 }

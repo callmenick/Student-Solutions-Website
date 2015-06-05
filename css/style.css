@@ -801,17 +801,14 @@ img {
 }
 
 .c-navigation-primary__link:hover {
-  color: #343434;
+  color: #aad264;
 }
 
 /**
  * Active states.
  */
 .c-navigation-primary__item.is-active > .c-navigation-primary__link {
-  padding: 4px 12px;
-  color: #fff;
-  background-color: #aad264;
-  border-radius: 4px;
+  color: #343434;
 }
 
 /* -----------------------------------------------------------------------------
@@ -934,3 +931,28 @@ img {
 .c-hero--special .c-hero__text {
   margin-bottom: 12px;
 }
+
+/* -----------------------------------------------------------------------------
+
+  BUTTONS COMPONENT
+  
+----------------------------------------------------------------------------- */
+/**
+ * Set up the button styles.
+ */
+.c-btn {
+  background: none;
+  border: none;
+  border-radius: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.c-btn:focus {
+  outline: none;
+}
+
+/**
+ * Size modifiers.
+ */

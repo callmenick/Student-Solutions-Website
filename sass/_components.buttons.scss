@@ -1,0 +1,26 @@
+/* -----------------------------------------------------------------------------
+
+  BUTTONS COMPONENT
+  
+----------------------------------------------------------------------------- */
+
+/**
+ * Set up the button styles.
+ */
+
+.c-btn {
+  background: none;
+  border: none;
+  border-radius: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.c-btn:focus {
+  outline: none;
+}
+
+/**
+ * Size modifiers.
+ */
