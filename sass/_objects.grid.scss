@@ -4,18 +4,26 @@
   
 ----------------------------------------------------------------------------- */
 
+/**
+ * Grid containers.
+ */
+
 .o-grid {
   overflow: hidden;
 }
 
 /**
- * Grid rows
+ * Grid rows.
  */
 
 .o-grid__row {
   display: flex;
   flex-flow: row wrap;
   margin-bottom: 48px;
+}
+
+.o-grid__row:last-child {
+  margin-bottom: 0;
 }
 
 /**
@@ -45,6 +53,10 @@
   margin-bottom: 0;
 }
 
+/**
+ * Breakpoints
+ */
+
 @include mq-small {
 
   .o-grid--break-s {
@@ -52,10 +64,6 @@
     .o-grid__row {
       margin-left: -24px;
       margin-right: -24px;
-    }
-
-    .o-grid__row:last-child {
-      margin-bottom: 0;
     }
 
     .o-grid__item--25,
@@ -94,19 +102,39 @@
       margin-right: -24px;
     }
 
-    .o-grid__row:last-child {
-      margin-bottom: 0;
-    }
-
     .o-grid__item--50 {
       flex: 0 0 50%;
+      margin-bottom: 0;
       padding: 0 24px;
     }
 
-    .o-grid__item--50 {
-      margin-bottom: 0;
-    }
+  }
 
+}
+
+/**
+ * Force no breakpoints
+ */
+
+.o-grid--no-break {
+
+  .o-grid__item--25,
+  .o-grid__item--33,
+  .o-grid__item--50 {
+    margin-bottom: 0;
+    background-color: #ccc;
+  }
+
+  .o-grid__item--25 {
+    flex: 0 0 25%;
+  }
+
+  .o-grid__item--33 {
+    flex: 0 0 33.3333%;
+  }
+
+  .o-grid__item--50 {
+    flex: 0 0 50%;
   }
 
 }

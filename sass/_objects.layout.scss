@@ -6,7 +6,8 @@
 
 .o-container {
   margin: 0 auto;
-  padding: 0 24px;
+  padding-left: 24px;
+  padding-right: 24px;
 }
 
 .o-container--s {
@@ -19,4 +20,14 @@
 
 .o-container--l {
   max-width: 1280px;
+}
+
+.o-container--pad-top {
+  padding-top: 24px;
+  padding-bottom: 24px;
+
+  @include mq-large {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
 }

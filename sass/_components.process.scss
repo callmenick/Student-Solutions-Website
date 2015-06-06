@@ -5,12 +5,7 @@
 ----------------------------------------------------------------------------- */
 
 .c-process {
-  padding: 24px 0;
   text-align: center;
-
-  @include mq-large {
-    padding: 48px 0;
-  }
 }
 
 .c-process__image {

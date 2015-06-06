@@ -5,15 +5,10 @@
 ----------------------------------------------------------------------------- */
 
 .o-footer {
-  padding: 24px 0;
   text-align: center;
 
   @include mq-medium {
     text-align: left;
-  }
-
-  @include mq-large {
-    padding: 48px 0;
   }
 }
 
@@ -30,6 +25,18 @@
   flex: 1;
 }
 
+.o-footer__branding {
+  margin-bottom: 48px;
+
+  @include mq-medium {
+    margin-bottom: 0;
+  }
+}
+
+.o-footer__navigation {
+  /**/
+}
+
 .o-footer__title {
   margin-bottom: 12px;
   font-size: $font-size--l;
@@ -42,10 +49,6 @@
 
 .o-footer__text {
   color: #fff;
-}
-
-.o-footer__navigation {
-  margin-bottom: 12px;
 }
 
 .o-footer__copyright {
