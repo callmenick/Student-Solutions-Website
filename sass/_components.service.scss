@@ -1,0 +1,68 @@
+/* -----------------------------------------------------------------------------
+
+  SERVICE COMPONENT
+  
+----------------------------------------------------------------------------- */
+
+.c-service {
+  margin-bottom: 48px;
+  text-align: center;
+
+  @include mq-medium {
+    display: flex;
+    align-items: center;
+    text-align: left;
+  }
+}
+
+.c-service:last-child {
+  margin-bottom: 0;
+}
+
+/**
+ * Service icons.
+ */
+
+.c-service__icon {
+  margin: 0 auto 24px auto;
+  width: 180px;
+  height: 180px;
+  border-radius: 100%;
+
+  @include mq-medium {
+    flex: 0 0 180px;
+    margin: 0;
+  }
+
+  @include mq-large {
+    flex: 0 0 240px;
+    margin: 0;
+    width: 240px;
+    height: 240px;
+  }
+}
+
+.c-service__icon--green {
+  background-color: $color--green;
+}
+
+.c-service__icon--slate {
+  background-color: $color--slate;
+}
+
+.c-service__icon > img {
+  display: block;
+  margin: 0;
+  max-width: 100%;
+  height: auto;
+}
+
+/**
+ * Service text
+ */
+
+.c-service__text {
+  @include mq-medium {
+    padding-left: 48px;
+  }
+}

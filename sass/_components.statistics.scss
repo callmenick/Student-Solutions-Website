@@ -1,0 +1,98 @@
+/* -----------------------------------------------------------------------------
+
+  STATISTICS COMPONENT
+  
+----------------------------------------------------------------------------- */
+
+.c-statistics {
+
+}
+
+.c-statistic {
+  display: flex;
+  align-items: center;
+}
+
+/**
+ * Statistic boxes
+ */
+
+.c-statistic-box {
+  display: none;
+  flex: 0 0 192px;
+  padding: 72px 24px;
+  height: 100%;
+  text-align: center;
+
+  @include mq-medium {
+    display: block;
+    flex: 0 0 288px;
+  }
+
+  @include mq-large {
+    flex: 0 0 384px;
+  }
+}
+
+/**
+ * Stats box text elements
+ */
+
+.c-statistic-box__number,
+.c-statistic-box__item {
+  color: #fff;
+}
+
+.c-statistic-box__number {
+  font-size: $font-size--xl;
+  font-weight: 700;
+}
+
+.c-statistic-box__item {
+  font-size: $font-size--l;
+}
+
+/**
+ * Statistic box dividers
+ */
+
+.c-statistic-box__divider {
+  display: block;
+  margin: 8px 0;
+  padding: 0;
+  width: 100%;
+  height: 2px;
+  border: none;
+}
+
+/**
+ * Modifiers for colours.
+ */
+
+.c-statistic-box--purple {
+  background-color: $color--purple;
+
+  .c-statistic-box__divider {
+    background-color: $color--dark-purple;
+  }
+}
+
+.c-statistic-box--grey {
+  background-color: $color--dark-slate;
+
+  .c-statistic-box__divider {
+    background-color: $color--neutral-dark;
+  }
+}
+
+/**
+ * Statistic content areas
+ */
+
+.c-statistic-content {
+  padding: 24px 0;
+
+  @include mq-medium {
+    padding-left: 24px;
+  }
+}

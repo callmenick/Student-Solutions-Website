@@ -697,34 +697,6 @@ img {
     padding: 0 24px;
   }
 }
-/**
- * Force no breakpoints
- */
-.o-grid--no-break .o-grid__item--25,
-.o-grid--no-break .o-grid__item--33,
-.o-grid--no-break .o-grid__item--50 {
-  margin-bottom: 0;
-  background-color: #ccc;
-}
-.o-grid--no-break .o-grid__item--25 {
-  -webkit-box-flex: 0;
-  -webkit-flex: 0 0 25%;
-      -ms-flex: 0 0 25%;
-          flex: 0 0 25%;
-}
-.o-grid--no-break .o-grid__item--33 {
-  -webkit-box-flex: 0;
-  -webkit-flex: 0 0 33.3333%;
-      -ms-flex: 0 0 33.3333%;
-          flex: 0 0 33.3333%;
-}
-.o-grid--no-break .o-grid__item--50 {
-  -webkit-box-flex: 0;
-  -webkit-flex: 0 0 50%;
-      -ms-flex: 0 0 50%;
-          flex: 0 0 50%;
-}
-
 /* -----------------------------------------------------------------------------
 
   HEADER OBJECT
@@ -1330,6 +1302,294 @@ img {
 
 /* -----------------------------------------------------------------------------
 
+  STATISTICS COMPONENT
+  
+----------------------------------------------------------------------------- */
+.c-statistic {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+/**
+ * Statistic boxes
+ */
+.c-statistic-box {
+  display: none;
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 192px;
+      -ms-flex: 0 0 192px;
+          flex: 0 0 192px;
+  padding: 72px 24px;
+  height: 100%;
+  text-align: center;
+}
+@media all and (min-width: 768px) {
+  .c-statistic-box {
+    display: block;
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 288px;
+        -ms-flex: 0 0 288px;
+            flex: 0 0 288px;
+  }
+}
+@media all and (min-width: 1020px) {
+  .c-statistic-box {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 384px;
+        -ms-flex: 0 0 384px;
+            flex: 0 0 384px;
+  }
+}
+
+/**
+ * Stats box text elements
+ */
+.c-statistic-box__number,
+.c-statistic-box__item {
+  color: #fff;
+}
+
+.c-statistic-box__number {
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.c-statistic-box__item {
+  font-size: 22px;
+}
+
+/**
+ * Statistic box dividers
+ */
+.c-statistic-box__divider {
+  display: block;
+  margin: 8px 0;
+  padding: 0;
+  width: 100%;
+  height: 2px;
+  border: none;
+}
+
+/**
+ * Modifiers for colours.
+ */
+.c-statistic-box--purple {
+  background-color: #bc9dd8;
+}
+.c-statistic-box--purple .c-statistic-box__divider {
+  background-color: #533c9f;
+}
+
+.c-statistic-box--grey {
+  background-color: #5f6c5f;
+}
+.c-statistic-box--grey .c-statistic-box__divider {
+  background-color: #343434;
+}
+
+/**
+ * Statistic content areas
+ */
+.c-statistic-content {
+  padding: 24px 0;
+}
+@media all and (min-width: 768px) {
+  .c-statistic-content {
+    padding-left: 24px;
+  }
+}
+
+/* -----------------------------------------------------------------------------
+
+  SERVICE COMPONENT
+  
+----------------------------------------------------------------------------- */
+.c-service {
+  margin-bottom: 48px;
+  text-align: center;
+}
+@media all and (min-width: 768px) {
+  .c-service {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: left;
+  }
+}
+
+.c-service:last-child {
+  margin-bottom: 0;
+}
+
+/**
+ * Service icons.
+ */
+.c-service__icon {
+  margin: 0 auto 24px auto;
+  width: 180px;
+  height: 180px;
+  border-radius: 100%;
+}
+@media all and (min-width: 768px) {
+  .c-service__icon {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 180px;
+        -ms-flex: 0 0 180px;
+            flex: 0 0 180px;
+    margin: 0;
+  }
+}
+@media all and (min-width: 1020px) {
+  .c-service__icon {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 240px;
+        -ms-flex: 0 0 240px;
+            flex: 0 0 240px;
+    margin: 0;
+    width: 240px;
+    height: 240px;
+  }
+}
+
+.c-service__icon--green {
+  background-color: #aad264;
+}
+
+.c-service__icon--slate {
+  background-color: #96aa96;
+}
+
+.c-service__icon > img {
+  display: block;
+  margin: 0;
+  max-width: 100%;
+  height: auto;
+}
+
+/**
+ * Service text
+ */
+@media all and (min-width: 768px) {
+  .c-service__text {
+    padding-left: 48px;
+  }
+}
+
+/* -----------------------------------------------------------------------------
+
+  ABOUT WIDGET COMPONENT
+  
+----------------------------------------------------------------------------- */
+.c-about-widget {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 24px;
+  height: 48px;
+}
+
+.c-about-widget:last-child {
+  margin-bottom: 0;
+}
+
+/**
+ * About widget icons
+ */
+.c-about-widget__icon {
+  display: block;
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 48px;
+      -ms-flex: 0 0 48px;
+          flex: 0 0 48px;
+  margin: 0;
+  background-color: #aad264;
+}
+
+/**
+ * About widget content
+ */
+.c-about-widget__content {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding-right: 12px;
+  background-color: #c7dbc7;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 48px;
+  text-align: right;
+}
+
+/* -----------------------------------------------------------------------------
+
+  CONTACT WIDGET COMPONENT
+  
+----------------------------------------------------------------------------- */
+.c-contact-widget {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 24px;
+}
+
+.c-contact-widget:last-child {
+  margin-bottom: 0;
+}
+
+/**
+ * Contact widget icons
+ */
+.c-contact-widget__icon {
+  display: block;
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 72px;
+      -ms-flex: 0 0 72px;
+          flex: 0 0 72px;
+  margin: 0;
+  height: 72px;
+  border-radius: 100%;
+}
+
+.c-contact-widget__icon--green {
+  background-color: #aad264;
+}
+
+.c-contact-widget__icon--slate {
+  background-color: #96aa96;
+}
+
+/**
+ * Contact widget text
+ */
+.c-contact-widget__text {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding-left: 24px;
+  font-size: 22px;
+}
+
+/* -----------------------------------------------------------------------------
+
   BUTTONS COMPONENT
   
 ----------------------------------------------------------------------------- */
@@ -1408,4 +1668,22 @@ img {
 
 .c-btn--green:hover {
   box-shadow: inset 0 -72px 0 0 #559f41;
+}
+
+/* -----------------------------------------------------------------------------
+
+  CONTENT BOX SCOPE
+  
+----------------------------------------------------------------------------- */
+.s-content-box h2 {
+  margin-bottom: 12px;
+  color: #343434;
+  font-size: 22px;
+  text-transform: uppercase;
+}
+.s-content-box p {
+  margin-bottom: 36px;
+}
+.s-content-box p:last-child {
+  margin-bottom: 0;
 }

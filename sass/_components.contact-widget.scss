@@ -1,0 +1,45 @@
+/* -----------------------------------------------------------------------------
+
+  CONTACT WIDGET COMPONENT
+  
+----------------------------------------------------------------------------- */
+
+.c-contact-widget {
+  display: flex;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.c-contact-widget:last-child {
+  margin-bottom: 0;
+}
+
+/**
+ * Contact widget icons
+ */
+
+.c-contact-widget__icon {
+  display: block;
+  flex: 0 0 72px;
+  margin: 0;
+  height: 72px;
+  border-radius: 100%;
+}
+
+.c-contact-widget__icon--green {
+  background-color: $color--green;
+}
+
+.c-contact-widget__icon--slate {
+  background-color: $color--slate;
+}
+
+/**
+ * Contact widget text
+ */
+
+.c-contact-widget__text {
+  flex: 1;
+  padding-left: 24px;
+  font-size: $font-size--l;
+}
